@@ -1,4 +1,7 @@
-﻿namespace ProjetoLanchesMVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ProjetoLanchesMVC.Models
 {
     public class Lanche
     {
