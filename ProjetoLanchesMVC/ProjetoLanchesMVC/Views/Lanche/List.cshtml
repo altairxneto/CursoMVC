@@ -1,6 +1,12 @@
 ﻿@model IEnumerable<ProjetoLanchesMVC.Models.Lanche>
 
-<div> <h2> Lanches cadastrados</h2></div>
+<div>
+    <h2>@ViewData["Titulo"]</h2>
+</div>
+<h4>@ViewData["Data"]</h4>
+<hr />
+<h3>@ViewBag.Total @ViewBag.TotalLanches</h3>
+<hr />
 
 @foreach(var lanche in Model)
 {
@@ -8,6 +14,6 @@
     <div> 
         <h4>Lanche: @lanche.Nome</h4>
         <p><img src="@lanche.ImagemUrl"></p>
-        <p>Preço: "lanche.Preco.ToString("c")"</p>
+        <p>Preço: @lanche.Preco.ToString("c")</p>
     </div>
 }
