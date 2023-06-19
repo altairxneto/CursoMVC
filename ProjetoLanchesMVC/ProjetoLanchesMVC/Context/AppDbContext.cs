@@ -9,6 +9,7 @@ namespace ProjetoLanchesMVC.Context
 
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<Lanche> Lanche { get; set; }
+        public DbSet<CarrinhoCompraItem> CarrinhoCompraItem { get; set; }
 
     }
 }
