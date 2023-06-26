@@ -1,4 +1,5 @@
-﻿using ProjetoLanchesMVC.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoLanchesMVC.Context;
 
 namespace ProjetoLanchesMVC.Models
 {
@@ -80,6 +81,24 @@ namespace ProjetoLanchesMVC.Models
             }
             _context.SaveChanges();
             return quantidadeLocal;
+        }
+
+        public List<CarrinhoCompraItem> GetCarrinhoCompraItens()
+        {
+            return CarrinhoCompraItens ?? (CarrinhoCompraItens =
+                _context.CarrinhoCompraItem
+                .Where(c => c.CarrinhoCompraId == CarrinhoCompraId)
+                .Include(s => s.Lanche)
+                .ToList());
+        }
+
+        public void LimparCarrinho()
+        {
+            var carrinhoItens = _context.CarrinhoCompraItem.Where
+                (carrinho => carrinho.CarrinhoCompraId == CarrinhoCompraId);
+
+            _context.CarrinhoCompraItem.RemoveRange(carrinhoItens);
+            _context.SaveChanges(true);
         }
     }
 }
