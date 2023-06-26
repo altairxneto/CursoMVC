@@ -100,5 +100,14 @@ namespace ProjetoLanchesMVC.Models
             _context.CarrinhoCompraItem.RemoveRange(carrinhoItens);
             _context.SaveChanges(true);
         }
+
+        public decimal GetCarrinhoCompraTotal()
+        {
+            var total = _context.CarrinhoCompraItem
+                .Where(c => c.CarrinhoCompraId == CarrinhoCompraId)
+                .Select(c=> c.Lanche.Preco * c.Quantidade).Sum();
+
+            return total;
+        }
     }
 }
