@@ -1,4 +1,6 @@
-﻿namespace ProjetoLanchesMVC.ViewModels
+﻿using ProjetoLanchesMVC.Models;
+
+namespace ProjetoLanchesMVC.ViewModels
 {
     public class CarrinhoCompraViewModel
     {
