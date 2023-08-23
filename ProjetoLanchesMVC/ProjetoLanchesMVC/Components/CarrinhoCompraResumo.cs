@@ -4,7 +4,7 @@ using ProjetoLanchesMVC.ViewModels;
 
 namespace ProjetoLanchesMVC.Components
 {
-    public class CarrinhoCompraResumo:ViewComponent
+    public class CarrinhoCompraResumo : ViewComponent
     {
         private readonly CarrinhoCompra _carrinhoCompra;
 
@@ -21,7 +21,7 @@ namespace ProjetoLanchesMVC.Components
             //    new CarrinhoCompraItem(),
             //    new CarrinhoCompraItem()
             //};
-            //_carrinhoCompra.CarrinhoCompraItens = itens;
+            _carrinhoCompra.CarrinhoCompraItens = itens;
 
             var carrinhoCompraVM = new CarrinhoCompraViewModel
             {
