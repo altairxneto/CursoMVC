@@ -16,3 +16,22 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.btn-orange-ff8a66 {
+    background-color: #ff8a66; /* Define a cor de fundo desejada */
+    color: #fff; /* Define a cor do texto */
+}
+
+.dropdown-item:active {
+    background-color: #fda287; /* Define a cor de fundo desejada */
+    color: #fff; /* Define a cor do texto */
+}
+
+.dropdown-item:hover {
+    background-color: #fda287; /* Define a cor de fundo desejada */
+    color: #fff; /* Define a cor do texto */
+}
+
+.custom-dropdown-menu{
+    background-color: #ff5300f2;
+}

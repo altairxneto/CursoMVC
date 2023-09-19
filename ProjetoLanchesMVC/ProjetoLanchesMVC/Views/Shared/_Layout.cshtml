@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProjetoLanchesMVC</title>
+    <title>@ViewData["Title"] ProjetoLanchesMVC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoLanchesMVC.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/kurama.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: orangered;">
             <div class="container">
-                <a class="navbar-brand text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">
                     ProjetoLanchesMVC
                 </a>
 
@@ -23,9 +24,10 @@
 
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     @await Component.InvokeAsync("CarrinhoCompraResumo")
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Lanche" asp-action="List">Lanches</a>
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
+                    @await Component.InvokeAsync("CategoriaMenu")
+                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    @*<a class="nav-link text-white" asp-area="" asp-controller="Lanche" asp-action="List">Lanches</a>*@
+                    <a class="nav-link text-white" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
                 </div>
             </div>
         </nav>
