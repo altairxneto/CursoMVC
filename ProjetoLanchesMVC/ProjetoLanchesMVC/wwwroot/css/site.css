@@ -35,3 +35,13 @@ body {
 .custom-dropdown-menu{
     background-color: #ff5300f2;
 }
+
+.btn-orange-ff8a66_2 {
+    background-color: #f0400a; /* Define a cor de fundo desejada */
+    color: #fff; /* Define a cor do texto */
+}
+
+.btn-orange-ff8a66_2:hover {
+    background-color: #00c315; /* Define a cor de fundo desejada */
+    color: #fff; /* Define a cor do texto */
+}
