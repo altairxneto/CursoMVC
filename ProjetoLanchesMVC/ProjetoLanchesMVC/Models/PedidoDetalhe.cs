@@ -17,4 +17,3 @@ namespace ProjetoLanchesMVC.Models
         public virtual Pedido Pedido { get; set; }
     }
 }
-}
